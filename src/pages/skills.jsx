@@ -38,7 +38,7 @@ const Skills = () => {
       h="100vh"
       overflowY="auto"
     >
-      <Heading color="primary">My Skills.</Heading>
+      <Heading color="white">My Skills.</Heading>
       <Flex w="100%" justify="center" align="center" zIndex={1}>
         {isLoading ? (
           <Spinner color="primary" size="lg" />

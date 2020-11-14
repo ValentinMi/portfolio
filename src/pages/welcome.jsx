@@ -19,7 +19,7 @@ const Welcome = () => {
         <Heading mb={0} color="primary">
           I am Misiaszek Valentin.
         </Heading>
-        <Heading mt={0} color="black">
+        <Heading mt={0} color="white">
           Fullstack Web Developer.
         </Heading>
         <Link style={{ textDecoration: "none" }} to="/skills">

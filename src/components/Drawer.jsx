@@ -21,6 +21,7 @@ const links = [
   { href: "/", label: "Welcome" },
   { href: "/skills", label: "Skills" },
   { href: "/career", label: "Career" },
+  { href: "/contact", label: "Contact me" },
 ];
 
 const Drawer = () => {

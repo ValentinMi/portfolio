@@ -17,6 +17,7 @@ import {
 import { getRemoteImgSrc } from "../utils/getRemoteImgSrc";
 import "react-vertical-timeline-component/style.min.css";
 import { useTheme } from "emotion-theming";
+import { NavLink } from "react-router-dom";
 
 const Career = () => {
   const [experiences, setExperiences] = useState([]);
@@ -39,14 +40,8 @@ const Career = () => {
   }, [fetchExperiences]);
 
   return (
-    <Flex
-      direction="column"
-      align="center"
-      bg="gray.200"
-      h="100vh"
-      overflow="auto"
-    >
-      <Heading color="primary">Career</Heading>
+    <Flex direction="column" align="center" h="100vh" overflow="auto">
+      <Heading color="white">Career</Heading>
       {
         <VerticalTimeline>
           {isLoading ? (
@@ -82,7 +77,6 @@ const Career = () => {
                     <Icon name="edit" />
                   )
                 }
-                dateClassName="exp-date"
               >
                 <Heading className="vertical-timeline-element-title">
                   {exp.title} - {exp.job}
@@ -97,7 +91,9 @@ const Career = () => {
         </VerticalTimeline>
       }
       <Box my={5}>
-        <Button variantColor={theme.buttonVariantColor}>Contact me</Button>
+        <NavLink to="/contact" style={{ textDecoration: "none" }}>
+          <Button variantColor={theme.buttonVariantColor}>Contact me</Button>
+        </NavLink>
       </Box>
     </Flex>
   );
